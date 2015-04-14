@@ -8,5 +8,14 @@ myApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
     when('/login', {
       templateUrl: 'views/login.html'
-    }); //$routeProvider when(path, route);
+    }).
+    when('/register', {
+      templateUrl: 'views/register.html'
+    }).
+    when('/meetings', {
+      templateUrl: 'views/meetings.html'
+    }).
+  	otherwise({
+	  redirectTo:'/login'
+  	}); //$routeProvider when(path, route);
 }]);
